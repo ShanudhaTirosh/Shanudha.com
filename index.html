@@ -127,7 +127,25 @@
             transform: scale(1.1);
             box-shadow: 0 0 20px var(--primary-color);
         }
+/* 3D Spline Integration */
+.spline-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    overflow: hidden;
+}
 
+spline-viewer {
+    width: 100%;
+    height: 100%;
+    border: none;
+    pointer-events: none; /* allows clicks to pass through */
+    opacity: 0.9;
+    filter: brightness(1.1);
+        }
         /* Hero Section */
         .hero-section {
             min-height: 100vh;
@@ -734,6 +752,11 @@
         <div class="floating-element"></div>
         
         <div class="container hero-content">
+            <!-- 3D Spline Scene -->
+<div class="spline-container">
+  <script type="module" src="https://unpkg.com/@splinetool/viewer@1.10.85/build/spline-viewer.js"></script>
+  <spline-viewer url="https://prod.spline.design/ccWcONNmaD9Eq364/scene.splinecode"></spline-viewer>
+</div>
             <div data-aos="fade-up">
                 <h1 class="hero-title">Hi, I'm Shanudha Tirosh</h1>
                 <p class="hero-subtitle">Front-End Developer | IoT Enthusiast | Student at G/Sri Kalyanathissa Vidyalaya</p>
